@@ -12,11 +12,10 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
-  overflow: hidden;
   font-family: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
   background-image: url("background.jpg");
   background-color: #1c1a0e;
@@ -33,13 +32,13 @@ body::before {
 }
 
 .stage {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 3rem 1.5rem;
+  padding: 1rem 1.5rem;
   text-align: center;
 }
 
@@ -54,24 +53,12 @@ body::before {
 .logo {
   width: clamp(120px, 26vw, 170px);
   height: auto;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .title {
-  font-size: clamp(1.9rem, 6vw, 3.25rem);
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  line-height: 1.15;
-}
-
-.title br {
-  display: none;
-}
-
-@media (min-width: 30rem) {
-  .title br {
-    display: block;
-  }
+  width: min(19rem, 100%);
+  height: auto;
 }
 
 .tagline {
